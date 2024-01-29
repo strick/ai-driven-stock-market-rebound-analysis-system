@@ -1,1 +1,1 @@
-# ai-driven-stock-market-rebound-analysis-system
+# AI-Driven Stock Market Rebound Analysis System
