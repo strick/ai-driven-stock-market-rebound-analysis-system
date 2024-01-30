@@ -2,6 +2,7 @@ from flask import Flask
 import requests
 import os
 from dotenv import load_dotenv
+import json  # Add this import
 
 app = Flask(__name__)
 load_dotenv()  # This is the important part
@@ -14,9 +15,6 @@ def get_stock_data(stock_symbol='IFRX'):
     r = requests.get(url)
     data = r.json()
     return data  # Add this line to return the data
-
-
-import json  # Add this import
 
 def home():
     data = get_stock_data('IFRX')
