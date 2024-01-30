@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investment Insight Application</title>
+</head>
+<body>
+    <h1>Stock Analysis Tool</h1>
+    <form method="POST">
+        <label for="stock_ticker">Enter Stock Ticker:</label>
+        <input type="text" id="stock_ticker" name="stock_ticker">
+        <button type="submit">Analyze</button>
+    </form>
+
+    {% if analysis %}
+        <h2>Analysis Result:</h2>
+        <p>{{ analysis }}</p>
+    {% endif %}
+
+    {% if genai_response %}
+        <h2>GenAI Response:</h2>
+        <p>{{ genai_response }}</p>
+    {% endif %}
+</body>
+</html>
